@@ -22,15 +22,15 @@ title: Guide de développement de plugin
 
 # Guide de développement de plugin
 
-Un *plugin* est un ensemble de code injecté qui permet le webview Cordova, dans lequel l'application restitue pour communiquer avec la plate-forme native sur lequel il s'exécute. Plugins permettent d'accéder aux fonctionnalités de périphérique et de la plate-forme habituellement non disponible pour les applications web. Toutes les fonctionnalités principales de Cordova API sont implémentées comme des plugins, et beaucoup d'autres n'est disponibles qu'enable caractéristiques tels que les scanners de codes à barres, communication NFC, ou d'adapter le calendrier des interfaces. Il y a un [Registre][1] des plugins disponibles.
+Un *plugin* est un ensemble de code injecté qui permet au webview Cordova, dans lequel l'application est affichée, de communiquer avec la plate-forme de facon native sur laquelle il s'exécute. Les Plugins permettent d'accéder aux fonctionnalités de périphérique et de la plate-forme habituellement non disponible pour les applications web. Toutes les fonctionnalités principales de Cordova API sont implémentées comme des plugins, et beaucoup d'autres ne sont disponibles qu'en activant les caractéristiques tels que les scanners de codes à barres, communication NFC, ou en adaptant le calendrier des interfaces. Il y a un [Registre][1] des plugins disponibles.
 
  [1]: http://plugins.cordova.io
 
-Plugins comportent une seule interface JavaScript ainsi que les bibliothèques de code natif correspondant pour chaque plate-forme prise en charge. En substance, cela masque les diverses implémentations de code natif derrière une interface commune de JavaScript.
+Les plugins ne comportent qu'une seule interface JavaScript ainsi que les bibliothèques de code natif correspondant pour chaque plate-forme prise en charge. En substance, cela masque les diverses implémentations de code natif derrière une interface commune de JavaScript.
 
-Étapes de cette section à un plugin simple *écho* qui transmet une chaîne à partir de JavaScript pour la plate-forme native et le retour, que vous pouvez utiliser comme modèle pour créer des fonctionnalités beaucoup plus complexes. Cette section traite de la structure du plugin de base et l'interface JavaScript donnant sur l'extérieur. Pour chaque interface native correspondante, consultez la liste à la fin de cette section.
+Les étapes de cette section décrivent la mise en place d'un plugin simple *écho* qui transmet une chaîne à partir de JavaScript pour la plate-forme native puis le traitement du retour. Vous pouvez utiliser ce projet comme modèle pour créer des fonctionnalités beaucoup plus complexes. Cette section traite de la structure du plugin de base et l'interface JavaScript donnant sur l'extérieur. Pour chaque interface native correspondante, consultez la liste à la fin de cette section.
 
-En plus de ces instructions, avant de commencer à écrire un plugin qu'il est préférable de chercher sur [les plugins][2] pour l'orientation.
+En plus de ces instructions, avant de commencer à écrire un plugin, il est préférable de chercher sur [les plugins][2] pour l'orientation.
 
  [2]: http://cordova.apache.org/#contribute
 
